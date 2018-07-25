@@ -17,7 +17,8 @@ namespace Dom.UI
 		public Size2 Size { get; set; } = new Size2(100, 30);
 
 		public string Text { get; set; } = "Button";
-		public event Action OnClick;
+		public delegate void ButtonDelegate(Button sender);
+		public event ButtonDelegate Click;
 
 		public Font Font => _font;
 
@@ -26,7 +27,7 @@ namespace Dom.UI
 			_font = new Font(renderer);
 		}
 
-		protected override bool IsPointOver(Point point)
+		internal override bool IsPointOver(Point point)
 		{
 			return point.X >= Location.X && point.X < Location.X + Size.Width &&
 				point.Y >= Location.Y && point.Y < Location.Y + Size.Height;
@@ -36,6 +37,11 @@ namespace Dom.UI
 		{
 			drawer.DrawRect(Location, Size);
 			drawer.DrawText(Location, Size, Text, _font);
+		}
+
+		internal override void OnMouseDown(Point point)
+		{
+			Click?.Invoke(this);
 		}
 	}
 }

@@ -18,9 +18,9 @@ namespace Dom.UI
 
 		internal virtual void OnDraw(Drawer drawer) { }
 
-		protected virtual void OnMouseDown(Point point) { }
-		protected virtual void OnMouseUp(Point point) { }
+		internal virtual void OnMouseDown(Point point) { }
+		internal virtual void OnMouseUp(Point point) { }
 
-		protected virtual bool IsPointOver(Point point) { return false; }
+		internal virtual bool IsPointOver(Point point) { return false; }
 	}
 }

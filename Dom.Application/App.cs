@@ -28,6 +28,12 @@ namespace Dom.Application
 			mainForm.FormClosed += MainForm_FormClosed;
 			mainForm.Paint += MainForm_Paint;
 			mainForm.ClientSizeChanged += MainForm_ClientSizeChanged;
+			mainForm.MouseDown += MainForm_MouseDown;
+		}
+
+		private void MainForm_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+		{
+
 		}
 
 		private void MainForm_ClientSizeChanged(object sender, EventArgs e)
@@ -53,7 +59,7 @@ namespace Dom.Application
 				//Enable = true
 			};
 
-			uiManager = new UI.Manager(renderer);
+			uiManager = new UI.Manager(mainForm, renderer);
 
 			OnInitialize();
 		}

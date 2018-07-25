@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Dom.MeshEditor
 {
@@ -52,6 +53,16 @@ namespace Dom.MeshEditor
 				Size = new Size2(90, 25)
 			};
 			UIManager.Add(scaleToolButton);
+
+			selectToolButton.Click += Click_Test;
+			moveToolButton.Click += Click_Test;
+			rotateToolButton.Click += Click_Test;
+			scaleToolButton.Click += Click_Test;
+		}
+
+		void Click_Test(UI.Button button)
+		{
+			MessageBox.Show(button.Text);
 		}
 	}
 }
