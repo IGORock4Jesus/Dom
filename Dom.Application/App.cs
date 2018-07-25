@@ -15,6 +15,8 @@ namespace Dom.Application
 
 		UI.Manager uiManager;
 		public UI.Manager UIManager => uiManager;
+		public Renderer Renderer => renderer;
+
 
 		public App()
 		{
@@ -24,11 +26,23 @@ namespace Dom.Application
 			mainForm = new MainForm();
 			mainForm.Load += MainForm_Load;
 			mainForm.FormClosed += MainForm_FormClosed;
+			mainForm.Paint += MainForm_Paint;
+			mainForm.ClientSizeChanged += MainForm_ClientSizeChanged;
+		}
+
+		private void MainForm_ClientSizeChanged(object sender, EventArgs e)
+		{
+			//renderer.ChangeSize()
+		}
+
+		private void MainForm_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
+		{
+			renderer.Draw();
 		}
 
 		private void MainForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
 		{
-			renderer.Enable = false;
+			//renderer.Enable = false;
 			renderer.Dispose();
 		}
 
@@ -36,18 +50,15 @@ namespace Dom.Application
 		{
 			renderer = new Renderer(mainForm)
 			{
-				Enable = true
+				//Enable = true
 			};
 
 			uiManager = new UI.Manager(renderer);
 
-			TestUI();
+			OnInitialize();
 		}
 
-		private void TestUI()
-		{
-			uiManager.Button("test", 20, 20, 120, 40, "Привет");
-		}
+		protected virtual void OnInitialize() { }
 
 		public void Run()
 		{

@@ -8,13 +8,15 @@ using System.Threading.Tasks;
 
 namespace Dom.UI
 {
-	public class Control
+	public abstract class Control
 	{
 		//List<Component> components = new List<Component>();
 
-		public string Name { get; internal set; }
+		public string Name { get; set; }
 
-		protected virtual void OnDraw(Drawer drawer) { }
+		internal virtual void OnInitialize(Renderer renderer) { }
+
+		internal virtual void OnDraw(Drawer drawer) { }
 
 		protected virtual void OnMouseDown(Point point) { }
 		protected virtual void OnMouseUp(Point point) { }

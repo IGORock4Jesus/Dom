@@ -34,5 +34,15 @@ namespace Dom.Graphics
 				new Vertex2D{pos = new Vector4(position.X, position.Y+size.Y, 0.0f, 1.0f), color = Color.White},
 			});
 		}
+
+		public void DrawRect(Point location, Size2 size)
+		{
+			DrawRect(new Vector2(location.X, location.Y), new Vector2(size.Width, size.Height));
+		}
+
+		public void DrawText(Point location, Size2 size, string text, Font font)
+		{
+			font.DFont.DrawText(null, text, new Rectangle(location.X, location.Y, size.Width, size.Height), FontDrawFlags.Center | FontDrawFlags.VerticalCenter, Color.Black);
+		}
 	}
 }

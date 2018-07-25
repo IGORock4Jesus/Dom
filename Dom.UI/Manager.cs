@@ -8,44 +8,31 @@ namespace Dom.UI
 {
 	public class Manager
 	{
-		List<ComponentSystem> systems;
 		List<Control> controls = new List<Control>();
+		private readonly Graphics.Renderer renderer;
+
+		public List<Control> Controls => controls;
+
+
 
 		public Manager(Graphics.Renderer renderer)
 		{
-			systems = new List<ComponentSystem>
-			{
-				new SpriteSystem(renderer)
-			};
+			renderer.Drawing += Renderer_Drawing;
+			this.renderer = renderer;
 		}
 
-		public T GetSystem<T>() where T : ComponentSystem
+		private void Renderer_Drawing(Graphics.Drawer drawer)
 		{
-			foreach (var s in systems)
+			foreach (var c in controls)
 			{
-				if (s is T)
-					return s as T;
+				c.OnDraw(drawer);
 			}
-			return null;
 		}
 
-		public void Button(string name, int x, int y, int w, int h, string text)
+		public void Add(Control control)
 		{
-			Control control = new Control
-			{
-				Name = name
-			};
-			var sprite = GetSystem<SpriteSystem>().Create();
-			sprite.Position = new SharpDX.Vector2(x, y);
-			sprite.Size = new SharpDX.Vector2(w, h);
-
-		}
-
-		public Control Create()
-		{
-			Control control = new Control();
 			controls.Add(control);
-			return control;
+			control.OnInitialize(renderer);
 		}
 	}
 }
