@@ -5,6 +5,16 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dom.Graphics", "Dom.Graphics\Dom.Graphics.csproj", "{E04880AC-71CC-46E1-AD08-545CD34065A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{A12D8D80-BD2A-4CAF-B0B5-0A9A553497AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dom.Windows", "Dom.Windows\Dom.Windows.csproj", "{2223BD48-EEF4-43BB-80A8-197E072E557B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dom.MeshEditor", "Dom.MeshEditor\Dom.MeshEditor.csproj", "{0931A814-8271-422A-8285-A6BD1C4EA110}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dom.UI", "Dom.UI\Dom.UI.csproj", "{2CC050D5-02F6-4911-85A3-67023170B9D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dom.Application", "Dom.Application\Dom.Application.csproj", "{F8FB4BDF-518E-4ED9-8624-CB3F9756E8AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,26 @@ Global
 		{E04880AC-71CC-46E1-AD08-545CD34065A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E04880AC-71CC-46E1-AD08-545CD34065A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E04880AC-71CC-46E1-AD08-545CD34065A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A12D8D80-BD2A-4CAF-B0B5-0A9A553497AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A12D8D80-BD2A-4CAF-B0B5-0A9A553497AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A12D8D80-BD2A-4CAF-B0B5-0A9A553497AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A12D8D80-BD2A-4CAF-B0B5-0A9A553497AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2223BD48-EEF4-43BB-80A8-197E072E557B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2223BD48-EEF4-43BB-80A8-197E072E557B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2223BD48-EEF4-43BB-80A8-197E072E557B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2223BD48-EEF4-43BB-80A8-197E072E557B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0931A814-8271-422A-8285-A6BD1C4EA110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0931A814-8271-422A-8285-A6BD1C4EA110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0931A814-8271-422A-8285-A6BD1C4EA110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0931A814-8271-422A-8285-A6BD1C4EA110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CC050D5-02F6-4911-85A3-67023170B9D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CC050D5-02F6-4911-85A3-67023170B9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CC050D5-02F6-4911-85A3-67023170B9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CC050D5-02F6-4911-85A3-67023170B9D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8FB4BDF-518E-4ED9-8624-CB3F9756E8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8FB4BDF-518E-4ED9-8624-CB3F9756E8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8FB4BDF-518E-4ED9-8624-CB3F9756E8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8FB4BDF-518E-4ED9-8624-CB3F9756E8AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Dom.Graphics
 {
-    public class Class1
-    {
-    }
+	public interface IDrawable
+	{
+		void Draw(Drawer drawer);
+	}
 }
